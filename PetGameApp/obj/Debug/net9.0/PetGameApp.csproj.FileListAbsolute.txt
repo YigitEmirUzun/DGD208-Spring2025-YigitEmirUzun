@@ -1,0 +1,35 @@
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2\PetGameApp\bin\Debug\net9.0\PetGameApp.exe
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2\PetGameApp\bin\Debug\net9.0\PetGameApp.deps.json
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2\PetGameApp\bin\Debug\net9.0\PetGameApp.runtimeconfig.json
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2\PetGameApp\bin\Debug\net9.0\PetGameApp.dll
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2\PetGameApp\bin\Debug\net9.0\PetGameApp.pdb
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2\PetGameApp\obj\Debug\net9.0\PetGameApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2\PetGameApp\obj\Debug\net9.0\PetGameApp.AssemblyInfoInputs.cache
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2\PetGameApp\obj\Debug\net9.0\PetGameApp.AssemblyInfo.cs
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2\PetGameApp\obj\Debug\net9.0\PetGameApp.csproj.CoreCompileInputs.cache
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2\PetGameApp\obj\Debug\net9.0\PetGameApp.dll
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2\PetGameApp\obj\Debug\net9.0\refint\PetGameApp.dll
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2\PetGameApp\obj\Debug\net9.0\PetGameApp.pdb
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2\PetGameApp\obj\Debug\net9.0\PetGameApp.genruntimeconfig.cache
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2\PetGameApp\obj\Debug\net9.0\ref\PetGameApp.dll
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2 - Kopya\PetGameApp\bin\Debug\net9.0\PetGameApp.exe
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2 - Kopya\PetGameApp\bin\Debug\net9.0\PetGameApp.deps.json
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2 - Kopya\PetGameApp\bin\Debug\net9.0\PetGameApp.runtimeconfig.json
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2 - Kopya\PetGameApp\bin\Debug\net9.0\PetGameApp.dll
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2 - Kopya\PetGameApp\bin\Debug\net9.0\PetGameApp.pdb
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2 - Kopya\PetGameApp\obj\Debug\net9.0\PetGameApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2 - Kopya\PetGameApp\obj\Debug\net9.0\PetGameApp.AssemblyInfoInputs.cache
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2 - Kopya\PetGameApp\obj\Debug\net9.0\PetGameApp.AssemblyInfo.cs
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2 - Kopya\PetGameApp\obj\Debug\net9.0\PetGameApp.csproj.CoreCompileInputs.cache
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2 - Kopya\PetGameApp\obj\Debug\net9.0\PetGameApp.dll
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2 - Kopya\PetGameApp\obj\Debug\net9.0\refint\PetGameApp.dll
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2 - Kopya\PetGameApp\obj\Debug\net9.0\PetGameApp.pdb
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2 - Kopya\PetGameApp\obj\Debug\net9.0\PetGameApp.genruntimeconfig.cache
+C:\Users\azazl\OneDrive\Masaüstü\Game Programming 2 - Kopya\PetGameApp\obj\Debug\net9.0\ref\PetGameApp.dll
+C:\Users\azazl\OneDrive\Masaüstü\Game_Programming_2_Assignment_2 - Kopya\PetGameApp\obj\Debug\net9.0\PetGameApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\azazl\OneDrive\Masaüstü\Game_Programming_2_Assignment_2 - Kopya\PetGameApp\obj\Debug\net9.0\PetGameApp.AssemblyInfoInputs.cache
+C:\Users\azazl\OneDrive\Masaüstü\Game_Programming_2_Assignment_2 - Kopya\PetGameApp\obj\Debug\net9.0\PetGameApp.AssemblyInfo.cs
+C:\Users\azazl\OneDrive\Masaüstü\Game_Programming_2_Assignment_2 - Kopya\PetGameApp\obj\Debug\net9.0\PetGameApp.csproj.CoreCompileInputs.cache
+C:\Users\azazl\OneDrive\Masaüstü\Game_Programming_2_Assignment_2 - Kopya\PetGameApp\obj\Debug\net9.0\PetGameApp.dll
+C:\Users\azazl\OneDrive\Masaüstü\Game_Programming_2_Assignment_2 - Kopya\PetGameApp\obj\Debug\net9.0\refint\PetGameApp.dll
+C:\Users\azazl\OneDrive\Masaüstü\Game_Programming_2_Assignment_2 - Kopya\PetGameApp\obj\Debug\net9.0\PetGameApp.pdb
