@@ -1,0 +1,112 @@
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+public class Game
+{
+    private bool _isRunning;
+    private List<Pet> StolenPets = new List<Pet>();
+    private const int maxPets = 3;
+    private ItemDatabase itemDatabase = new ItemDatabase();
+
+    private StealPetManager stealPetManager;
+    private FeedPetManager feedPetManager;
+
+    public Game()
+    {
+        stealPetManager = new StealPetManager(StolenPets, maxPets);
+        feedPetManager = new FeedPetManager(StolenPets, itemDatabase);
+    }
+
+    public async Task GameLoop()
+    {
+        Initialize();
+
+        _isRunning = true;
+        while (_isRunning)
+        {
+            UpdatePetStats();
+
+            Menu.ShowMainMenu();
+            string choice = Menu.GetUserChoice();
+
+            await ProcessUserChoice(choice);
+        }
+
+        Console.WriteLine("Thanks for playing!");
+    }
+
+    private void Initialize()
+    {
+        Console.WriteLine("Welcome to Pet Steal!");
+    }
+
+    private async Task ProcessUserChoice(string choice)
+    {
+        switch (choice)
+        {
+            case "1":
+                stealPetManager.StealPet();
+                break;
+            case "2":
+                ShowStolenPets();
+                break;
+            case "3":
+                feedPetManager.FeedPet();
+                break;
+            case "4":
+                _isRunning = false;
+                break;
+            case "5":
+                ShowCredits();
+                break;
+            default:
+                Console.WriteLine("Invalid choice, please try again.");
+                break;
+        }
+
+        await Task.CompletedTask;
+    }
+
+    private void ShowStolenPets()
+    {
+        if (StolenPets.Count == 0)
+        {
+            Console.WriteLine("No stolen pets found.");
+            return;
+        }
+
+        Console.WriteLine("Your stolen pets:");
+
+        int count = 1;
+        foreach (var pet in StolenPets)
+        {
+            Console.WriteLine($"{count}. {pet.Name}");
+            pet.ShowAsciiArt();
+            count++;
+        }
+    }
+
+    private void ShowCredits()
+    {
+        Console.WriteLine("\n--- CREDITS ---");
+        Console.WriteLine("Game Developer: Yiğit Emir Uzun");
+        Console.WriteLine("School Number: 225040083");
+        Console.WriteLine("----------------\n");
+    }
+
+    private void UpdatePetStats()
+    {
+        for (int i = StolenPets.Count - 1; i >= 0; i--)
+        {
+            var pet = StolenPets[i];
+            pet.DecreaseStatsOverTime();
+
+            if (pet.IsDead())
+            {
+                Console.WriteLine($"{pet.Name} has died from hunger!");
+                StolenPets.RemoveAt(i);
+            }
+        }
+    }
+}
