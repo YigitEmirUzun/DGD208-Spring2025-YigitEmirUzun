@@ -14,21 +14,29 @@ public class Pet
         Stats.ShowStats();
     }
 
-    public void Feed(Item item)
+    public bool Feed(Item item)
+{
+    if (item.Type != ItemType.Food)
     {
-        int nutrition = item.NutritionValue;
-        int happinessChange = item.LikesPet(Name) ? item.HappinessBoost : -item.HappinessPenalty;
-
-        if(item.Type == ItemType.Food)
-        {
-            Stats.Feed(nutrition);
-            Stats.Play(happinessChange);
-        }
-        else if(item.Type == ItemType.Toy)
-        {       
-            Stats.Play(happinessChange);
-        }
+        Console.WriteLine($"{Name} can only eat food items.");
+        return false;
     }
+
+    if (item.LikesPet(Name))
+    {
+        Stats.Feed(item.NutritionValue);
+        Stats.Play(item.HappinessBoost);
+        return true;
+    }
+    else
+    {
+        Stats.Feed(-5);
+        Stats.Play(-item.HappinessPenalty);
+        Console.WriteLine($"{Name} did not like the {item.Name}.");
+        return false;
+    }
+}
+
 
     public void SleepPet(int amount)
     {
@@ -39,12 +47,12 @@ public class Pet
 
     public void Play(int amount)
     {
-    Stats.Play(amount);
+        Stats.Play(amount);
     }
 
     public void SleepWell(int amount)
     {
-    Stats.SleepWell(amount);
+        Stats.SleepWell(amount);
     }
 
     public void ShowAsciiArt()
