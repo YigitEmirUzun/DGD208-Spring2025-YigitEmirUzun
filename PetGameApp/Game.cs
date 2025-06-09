@@ -55,7 +55,7 @@ public class Game
                 feedPetManager.FeedPet();
                 break;
             case "4":
-                PlayWithPet();
+                PlayWithPetHandler.PlayWithPet(StolenPets, itemDatabase);
                 break;
             case "5":
                 PutPetToSleep();
@@ -116,58 +116,6 @@ public class Game
             }
         }
     }
-
-    private void PlayWithPet()
-    {
-        if (StolenPets.Count == 0)
-        {
-            Console.WriteLine("You have no pets to play with.");
-            return;
-        }
-
-        Console.WriteLine("Which pet do you want to play with?");
-        for (int i = 0; i < StolenPets.Count; i++)
-        {
-            Console.WriteLine($"{i + 1} - {StolenPets[i].Name}");
-        }
-
-        string petInput = Console.ReadLine();
-        if (!int.TryParse(petInput, out int petChoice) || petChoice < 1 || petChoice > StolenPets.Count)
-        {
-            Console.WriteLine("Invalid pet selection.");
-            return;
-        }
-
-        Pet selectedPet = StolenPets[petChoice - 1];
-
-        var toys = itemDatabase.Items.Where(item => item.Type == ItemType.Toy).ToList();
-
-        if (toys.Count == 0)
-        {
-            Console.WriteLine("No toys available to play with.");
-            return;
-        }
-
-        Console.WriteLine("Available toys:");
-        for (int i = 0; i < toys.Count; i++)
-        {
-            Console.WriteLine($"{i + 1} - {toys[i].Name}");
-        }
-
-        string toyInput = Console.ReadLine();
-        if (!int.TryParse(toyInput, out int toyChoice) || toyChoice < 1 || toyChoice > toys.Count)
-        {
-            Console.WriteLine("Invalid toy selection.");
-            return;
-        }
-
-        Item selectedToy = toys[toyChoice - 1];
-
-        selectedPet.Play(selectedToy.HappinessBoost);
-
-        Console.WriteLine($"{selectedPet.Name} is playing with {selectedToy.Name} and feels happier!");
-    }
-
     private void PutPetToSleep()
     {
         if (StolenPets.Count == 0)
