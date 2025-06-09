@@ -17,9 +17,7 @@ public class ItemDatabase
             new Item("Rubber Ball", 0, 30, 0, new List<string> { "Dog", "Monkey" }, ItemType.Toy),
             new Item("Chew Toy", 0, 30, 0, new List<string> { "Dog" }, ItemType.Toy),
             new Item("Toy Pool", 0, 30, 0, new List<string> { "Frog" }, ItemType.Toy),
-            new Item("Hanging Rod", 0, 30, 0, new List<string> { "Bat" }, ItemType.Toy)
+            new Item("Hanging Rod", 0, 30, 0, new List<string> { "Bat", "Bird" }, ItemType.Toy)
         };
     }
 }
-
-
