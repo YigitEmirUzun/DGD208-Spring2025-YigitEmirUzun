@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public class FeedPetManager
 {
@@ -26,8 +27,7 @@ public class FeedPetManager
             Console.WriteLine($"{i + 1} - {stolenPets[i].Name}");
         }
 
-        string petChoiceInput = Console.ReadLine();
-        if (!int.TryParse(petChoiceInput, out int petChoice) || petChoice < 1 || petChoice > stolenPets.Count)
+        if (!int.TryParse(Console.ReadLine(), out int petChoice) || petChoice < 1 || petChoice > stolenPets.Count)
         {
             Console.WriteLine("Invalid pet selection.");
             return;
@@ -35,24 +35,30 @@ public class FeedPetManager
 
         Pet selectedPet = stolenPets[petChoice - 1];
 
-        Console.WriteLine("Which item do you want to use to feed the pet?");
-        for (int i = 0; i < itemDatabase.Items.Count; i++)
-        {
-            Console.WriteLine($"{i + 1} - {itemDatabase.Items[i].Name}");
-        }
+        var foods = itemDatabase.Items.Where(item => item.Type == ItemType.Food).ToList();
 
-        string itemChoiceInput = Console.ReadLine();
-        if (!int.TryParse(itemChoiceInput, out int itemChoice) || itemChoice < 1 || itemChoice > itemDatabase.Items.Count)
+        if (foods.Count == 0)
         {
-            Console.WriteLine("Invalid item selection.");
+            Console.WriteLine("No food items available.");
             return;
         }
 
-        Item selectedItem = itemDatabase.Items[itemChoice - 1];
+        Console.WriteLine("Which food do you want to use to feed the pet?");
+        for (int i = 0; i < foods.Count; i++)
+        {
+            Console.WriteLine($"{i + 1} - {foods[i].Name}");
+        }
 
-        selectedPet.Feed(selectedItem);
+        if (!int.TryParse(Console.ReadLine(), out int foodChoice) || foodChoice < 1 || foodChoice > foods.Count)
+        {
+            Console.WriteLine("Invalid food selection.");
+            return;
+        }
 
-        Console.WriteLine($"{selectedPet.Name} has been fed with {selectedItem.Name}.");
+        Item selectedFood = foods[foodChoice - 1];
+
+        selectedPet.Feed(selectedFood);
+
+        Console.WriteLine($"{selectedPet.Name} has been fed with {selectedFood.Name}.");
     }
 }
-
