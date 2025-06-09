@@ -1,7 +1,5 @@
 public enum ItemType
 {
-    Food
-    
+    Food,
+    Toy
 }
-
-// I will add Toy Later
