@@ -1,5 +1,3 @@
-using System;
-
 public class PetStat
 {
     public int Hunger { get; private set; }
@@ -34,6 +32,13 @@ public class PetStat
         if (Sleep < 0) Sleep = 0;
     }
 
+    public void DecreaseOverTime()
+    {
+        Feed(-5);  
+        Play(-3);   
+        SleepWell(-2); 
+    }
+
     public void ShowStats()
     {
         Console.WriteLine($"Hunger: {Hunger}");
@@ -41,4 +46,3 @@ public class PetStat
         Console.WriteLine($"Sleep: {Sleep}");
     }
 }
-// I will add the pets' stats decreasing over time in the future.
