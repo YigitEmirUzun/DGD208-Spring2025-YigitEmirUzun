@@ -1,5 +1,3 @@
-using System;
-
 public class Pet
 {
     public string Name { get; private set; }
@@ -20,8 +18,33 @@ public class Pet
     {
         int nutrition = item.NutritionValue;
         int happinessChange = item.LikesPet(Name) ? item.HappinessBoost : -item.HappinessPenalty;
-        Stats.Feed(nutrition);
-        Stats.Play(happinessChange);
+
+        if(item.Type == ItemType.Food)
+        {
+            Stats.Feed(nutrition);
+            Stats.Play(happinessChange);
+        }
+        else if(item.Type == ItemType.Toy)
+        {       
+            Stats.Play(happinessChange);
+        }
+    }
+
+    public void SleepPet(int amount)
+    {
+        Stats.SleepWell(amount);
+        Stats.Feed(-2);
+        Stats.Play(-1);
+    }
+
+    public void Play(int amount)
+    {
+    Stats.Play(amount);
+    }
+
+    public void SleepWell(int amount)
+    {
+    Stats.SleepWell(amount);
     }
 
     public void ShowAsciiArt()
@@ -31,9 +54,7 @@ public class Pet
 
     public void DecreaseStatsOverTime()
     {
-        Stats.Feed(-5);    
-        Stats.Play(-3);      
-        Stats.SleepWell(-2); 
+        Stats.DecreaseOverTime();
     }
 
     public bool IsDead()
