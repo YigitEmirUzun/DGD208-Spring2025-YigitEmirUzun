@@ -14,9 +14,10 @@ public class ItemDatabase
             new Item("Banana", 25, 12, 6, new List<string> { "Monkey" }, ItemType.Food),
             new Item("Blood", 20, 10, 7, new List<string> { "Bat" }, ItemType.Food),
 
-            new Item("Rubber Ball", 0, 20, 0, new List<string> { "Dog", "Monkey" }, ItemType.Toy),
-            new Item("Chew Toy", 0, 15, 0, new List<string> { "Dog" }, ItemType.Toy),
-            new Item("Swing", 0, 18, 0, new List<string> { "Monkey" }, ItemType.Toy)
+            new Item("Rubber Ball", 0, 30, 0, new List<string> { "Dog", "Monkey" }, ItemType.Toy),
+            new Item("Chew Toy", 0, 30, 0, new List<string> { "Dog" }, ItemType.Toy),
+            new Item("Toy Pool", 0, 30, 0, new List<string> { "Frog" }, ItemType.Toy),
+            new Item("Hanging Rod", 0, 30, 0, new List<string> { "Bat" }, ItemType.Toy)
         };
     }
 }
