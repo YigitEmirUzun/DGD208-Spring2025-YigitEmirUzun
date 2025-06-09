@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 public class Item
@@ -21,6 +22,6 @@ public class Item
 
     public bool LikesPet(string petName)
     {
-        return LikedByPets.Contains(petName);
+        return LikedByPets.Exists(p => string.Equals(p, petName, StringComparison.OrdinalIgnoreCase));
     }
 }
