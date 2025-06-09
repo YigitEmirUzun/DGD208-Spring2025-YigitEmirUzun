@@ -57,8 +57,10 @@ public class FeedPetManager
 
         Item selectedFood = foods[foodChoice - 1];
 
-        selectedPet.Feed(selectedFood);
+        bool fedSuccessfully = selectedPet.Feed(selectedFood);
 
-        Console.WriteLine($"{selectedPet.Name} has been fed with {selectedFood.Name}.");
+        if (fedSuccessfully)
+            Console.WriteLine($"{selectedPet.Name} has been fed with {selectedFood.Name}.");
     }
+
 }
